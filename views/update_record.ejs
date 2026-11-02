@@ -1,0 +1,44 @@
+
+<%- include('./base/header.ejs') %>
+
+<div class="alert alert-primary">
+    <h3>Update Student Record</h3>
+</div>
+
+<div class="container w-50 shadow-lg p-3 bg-body rounded">
+
+    <form action="/edit/<%= record._id %>" method="POST">
+
+        <div class="mb-3">
+            <label class="form-label">Enter Your Name</label>
+            <input type="text" name="name" class="form-control"
+                value="<%= record.name %>" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Enter Your Email</label>
+            <input type="email" name="email" class="form-control"
+                value="<%= record.email %>" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Enter Your City</label>
+            <input type="text" name="city" class="form-control"
+                value="<%= record.city %>" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Enter Your Contact Number</label>
+            <input type="text" name="contact" class="form-control"
+                value="<%= record.contact %>" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Update Record
+        </button>
+
+    </form>
+
+</div>
+
+<%- include('./base/footer.ejs') %>
